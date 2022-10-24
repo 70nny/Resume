@@ -122,8 +122,9 @@
   </div>
                   
                   
-                  <script>
+  <script>
       let a = document.querySelector('.btn');
+      let d = a;
       let form = document.querySelector('.form');
       a.addEventListener('click', () => {
        let name =  document.querySelector('#name').value;
@@ -137,8 +138,13 @@
         b.innerText = 'Подтвердить';
         let c = document.createElement('a');
         c.setAttribute('href', link);
+        c.setAttribute('target', "_blank");
         c.append(b);
         form.append(c);
+        c.addEventListener('click', () => {
+          c.remove();
+          form.append(d);
+        })
       })
       
     </script>
