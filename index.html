@@ -136,7 +136,7 @@
         b.classList.add('btn');
         b.innerText = 'Подтвердить';
         let c = document.createElement('a');
-        c.getAttribute('href') = link;
+        c.setAttribute('href', link);
         c.append(b);
         form.append(c);
       })
