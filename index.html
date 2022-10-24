@@ -91,7 +91,7 @@
 
     
 
-    <form action="resum.php" class="form" method="get">
+    <form action="" class="form">
       <h2>Связаться со мной</h2>
 
       <div class="form-row">
@@ -114,6 +114,26 @@
 
       <input class="btn" type="submit" value="Отправить!">
     </form>
+    <script>
+      let a = document.querySelector('.btn');
+      let form = document.querySlelector('.form');
+      a.addEventListener('click', () => {
+       let name =  document.querySelector('#name').value;
+        let email =  document.querySelector('#email').value;
+        let msg =  document.querySelector('#message').value;
+        let txt = name + '%0A' + email + '%0A' + msg;
+        let link = "https://api.telegram.org/bot5665128925:AAHA-mQKtxARBoWMAhERUx49bjlNtYYavjc/sendMessage?chat_id=1001201541&text=" + txt;
+        a.remove();
+        let b = document.createElement('div')
+        b.classList.add('btn');
+        b.innerText = 'Подтвердить';
+        let c = document.createElement('a');
+        c.getAttribute('href') = link;
+        c.append(b);
+        form.append(c);
+      })
+      
+    </script>
    
 
     <br>
