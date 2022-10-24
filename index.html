@@ -91,42 +91,30 @@
 
     
 
-    <form action="" class="form">
+    <form action="resum.php" class="form" method="get">
       <h2>Связаться со мной</h2>
 
       <div class="form-row">
 
         <div class="form-group">
           <label for="name">Ваше имя:</label>
-          <input type="text" id="name" placeholder="Введите имя" required>
+          <input type="text" id="name" placeholder="Введите имя" required name="nm">
         </div>
 
         <div class="form-group">
           <label for="email">Ваш email:</label>
-          <input type="email" id="email" placeholder="Введите email" required>
+          <input type="email" id="email" placeholder="Введите email" required name="em">
         </div>
       </div>
 
       <div class="form-group">
         <label for="message">Ваше сообщение:</label>
-        <textarea id="message" cols="20" rows="5" placeholder="Введите сообщение..." required></textarea>
+        <textarea id="message" cols="20" rows="5" placeholder="Введите сообщение..." required name="msg"></textarea>
       </div>
 
-      <a href="https://api.telegram.org/bot5665128925:AAHA-mQKtxARBoWMAhERUx49bjlNtYYavjc/sendMessage?chat_id=1001201541&text=" class="submit_href"><input class="btn" type="submit" value="Отправить!"></a>
+      <input class="btn" type="submit" value="Отправить!">
     </form>
-    
-    <script>
-      window.alert('2');
-      const a = document.querySelector('.submit_href');
-      a.addEventListener('click', () => {
-        let name = document.querySelector('#name');
-        let email = document.querySelector('#email');
-        let message = document.querySelector('#message');
-        a.getAttribute('href') = a.getAttribute('href') + name + '%0A' + email + '%0A' + message;
-        let b = a.getAttribute('href');
-        console.log(b)
-      })
-    </script>
+   
 
     <br>
     <br>
