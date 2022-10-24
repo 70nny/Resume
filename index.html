@@ -91,7 +91,7 @@
 
     
 
-    <form action="" class="form" method="POST">
+    <form action="" class="form">
       <h2>Связаться со мной</h2>
 
       <div class="form-row">
@@ -116,9 +116,13 @@
     </form>
     
     <script>
-      window.alert('1');
+      window.alert('2');
       const a = document.querySelector('.submit_href');
       a.addEventListener('click', () => {
+        let name = document.querySelector('#name');
+        let email = document.querySelector('#email');
+        let message = document.querySelector('#message');
+        a.getAttribute('href') = a.getAttribute('href') + name + '%0A' + email + '%0A' + message;
         let b = a.getAttribute('href');
         console.log(b)
       })
